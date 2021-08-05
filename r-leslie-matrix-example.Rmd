@@ -1,0 +1,72 @@
+---
+title: "R Leslie Matrix Example"
+author: "Paloma Cartwright"
+date: "05/08/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Creating matrices in R 
+
+Use the `matrix()` function to wrap a series of calies (a vector) into a matrix. 
+
+- Use `nrow = ` to specify number of rows 
+- Use `ncol = ` to specify number of columns
+- Use `byrow = TRUE` to populate the matrix of ROWS instead of columns 
+
+### Practicing Matrices in R 
+```{r}
+
+cats <- c(1.2, 4, 7, 9, 17, 4, 3, 24, 87, 9, 5, 12)
+
+#Wrap cats into a matrix 
+
+cat_matrix <- matrix(data = cats, nrow = 4, ncol = 5, byrow = TRUE)
+```
+
+```{r}
+dogs <- matrix(data = c(1, 0, 2, 3), nrow = 2, ncol = 2, byrow = TRUE)
+
+mat1 <- matrix(data = c(2, 4, 6, 8), nrow = 2, ncol = 2, byrow = TRUE)
+
+print(mat1 - dogs)
+print(mat1 + dogs)
+print(5*mat1)
+print(dogs %*% mat1)
+
+```
+
+
+### Create a Leslie Matrix in R 
+
+```{r}
+# leslie_vector <- c(0, 0, 600, 0.2, 0, 0, 0, 0.08, 0) - added this after, 
+# I don't know if I will need to use it yet 
+
+leslie_matrix <- matrix(c(0, 0, 600, 0.2, 0, 0, 0, 0.08, 0.6), nrow = 3, 
+                        ncol= 3, byrow = TRUE)
+leslie_matrix
+
+# Specify the initial conditions
+# What is the population in each life stage in year 0?
+
+insect_y0 <- c(12000, 700, 500)
+
+# Predicts the year 1 populations
+print(insect_y1 <- leslie_matrix %*% insect_y0)
+
+# Predicts the year 2 populations 
+print(insect_y2 <- leslie_matrix %*% insect_y1)
+
+# Predicts the year 3 populations 
+print(insect_y3 <- leslie_matrix %*% insect_y2)
+
+# Predicts the year 4 populations 
+print(insect_y4 <- leslie_matrix %*% insect_y3)
+
+
+```
+
