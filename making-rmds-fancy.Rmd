@@ -1,0 +1,61 @@
+---
+title: "My Fancy Rmd"
+subtitle: "Some changes in my YAML"
+author: "Paloma Cartwright"
+output: 
+  html_document:
+    theme: flatly
+    toc: TRUE
+    toc_float: TRUE
+    number_sections: TRUE
+    code_folding: hide
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+# Welcome to the my World
+## Chapter 1
+
+### Preface 
+
+Nonprofit earthmother twelfthhouse acaiberries equinox asana sustainable feelingabandoned midwifery, morphicresonance singingbowl microfestival pastlife pisces karmiconeness grass-fed ancient, ecstaticdance shamanicceremony rolfing deep herbalmedicine taichi sacredgeometricshapes. Shamanicceremony enlightenment cuddleparty cleansing stevia multi-dimensional cosmic master manifestation nagchampa, colloidalsilver ancient macrobiotic eyegazing communal birthname leo quinoa sacredceremony crystalhealing, ganja bluewhale 
+
+Benny is outputed by some codey code in my document. Benny is some unknown sum of some unknown things 
+
+```{r}
+
+a <- 10
+b <- 5 
+
+benny <- a + b 
+benny 
+```
+# My World is a fun space 
+
+## Chapter 2
+
+The Bahamas RUN TINGS 
+Nonprofit earthmother twelfthhouse acaiberries equinox asana sustainable feelingabandoned midwifery, morphicresonance singingbowl microfestival pastlife pisces karmiconeness grass-fed ancient, ecstaticdance shamanicceremony rolfing deep herbalmedicine taichi sacredgeometricshapes. Shamanicceremony enlightenment cuddleparty cleansing stevia multi-dimensional cosmic master manifestation nagchampa, colloidalsilver ancient macrobiotic eyegazing communal birthname leo quinoa sacredceremony crystalhealing, ganja bluewhale 
+
+## Chapter 3 
+
+### A note on the second chapter 
+
+Here is a random note, saying random things, what a random life. Nonprofit earthmother twelfthhouse acaiberries equinox asana sustainable feelingabandoned midwifery, morphicresonance singingbowl microfestival pastlife pisces karmiconeness grass-fed ancient, ecstaticdance shamanicceremony rolfing deep herbalmedicine taichi sacredgeometricshapes. Shamanicceremony enlightenment cuddleparty cleansing stevia multi-dimensional cosmic master manifestation nagchampa, colloidalsilver ancient macrobiotic eyegazing communal birthname leo quinoa sacredceremony crystalhealing, ganja bluewhale 
+
+```{r}
+
+mean(mtcars$mpg)
+
+happy <- 2 + 5
+
+happy
+```
+# The Bahamas 
+### Final note from the author
+
+It is Bahamian flag day because we won the Olympics. Dassit and dasalll. 
+
+#### Congrats Speedie Stevie 
+
