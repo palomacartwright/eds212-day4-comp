@@ -7,5 +7,51 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+library(GGally)
+library(skimr)
+library(palmerpenguins)
+
 ```
+
+## Rapid fire tools for data exploration 
+
+We are using the penguins data set from palmer peguins 
+```{r}
+# Return the names of all variables 
+names(penguins)
+
+# Dimensions 
+dim(penguins)
+
+# Get an overall summary of the data 
+summary(penguins)
+
+#Look at the first few lines 
+head(penguins)
+
+#Look at the last 6 lines 
+tail(penguins)
+
+#Made a data fram the penguins dataset 
+species_df <- data.frame(c(penguins$species, penguins$island,
+                           penguins$sex))
+
+# Use GGally::ggpairs()
+GGally::ggpairs(data = penguins)
+
+# Use skimr::skim()
+skimr::skim(penguins)
+
+# Histogram of flipper lengths
+ggplot(data = penguins, aes(x = flipper_length_mm)) + 
+  geom_histogram() + 
+  facet_wrap(~species)
+
+# Make a faceted histogram of penguin bill_length_mm, faceted by island 
+ggplot(data = penguins, aes(x= bill_length_mm)) + 
+  geom_histogram() +
+  facet_wrap(~islands)
+
+```
+
 
