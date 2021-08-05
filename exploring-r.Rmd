@@ -50,7 +50,7 @@ ggplot(data = penguins, aes(x = flipper_length_mm)) +
 # Make a faceted histogram of penguin bill_length_mm, faceted by island 
 ggplot(data = penguins, aes(x= bill_length_mm)) + 
   geom_histogram() +
-  facet_wrap(~islands)
+  facet_wrap(~island)
 
 ```
 
